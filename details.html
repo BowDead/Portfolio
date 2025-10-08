@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bartłomiej Gwóźdź | DETAILS</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <script src="scripts/headercomponent.js"></script>
+    <link rel="stylesheet" href="styles/headfootstyle.css">
+    <link rel="stylesheet" href="styles/contentstyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const currentPage = urlParams.get('page') || 1; // Pobranie bieżącej strony z URL
+            const selectedItem = JSON.parse(localStorage.getItem('selectedItem'));
+            if (selectedItem) {
+                document.getElementById('caption').textContent = selectedItem.caption;
+                document.getElementById('description').textContent = selectedItem.description;
+            } else {
+                document.getElementById('caption').textContent = 'No item selected.';
+                document.getElementById('description').textContent = '';
+            }
+
+            const returnerLink = document.querySelector('.returner');
+            returnerLink.href = `list.html?page=${currentPage}`; // Aktualizacja linku "Powrót"
+
+            injectHeader('head1', 'header1');
+            injectHeader('head2', 'header2');
+        }
+    </script>
+</head>
+<body>
+    <div id="head1" class="header1"></div>
+    <div id="head2" class="header2"></div>
+    <div class="content">
+        <div class="boxtitle">
+            <h2 id="caption">Nazwa wybranego projektu:</h2>
+        </div>
+        <div class="textfield">
+            <p id="description"></p>
+        </div>
+        <a class="returner" href="list.html">Powrót</a>
+    </div>
+    <div class="footer">© 2025 Bartłomiej Gwóźdź. Wszystkie prawa zastrzeżone</div>
+</body>
+</html>
