@@ -4,58 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bartłomiej Gwóźdź | HOME</title>
+    <title>| HOME | - Bartłomiej Gwóźdź</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <script src="scripts/headercomponent.js"></script>
-    <link rel="stylesheet" href="styles/headfootstyle.css">
-    <link rel="stylesheet" href="styles/contentstyle.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kalam:wght@300;400;700&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="styles/main_style.css">
 </head>
 
 <body>
-    <div id="head1" class="header1"></div>
-    <div id="head2" class="header2"></div>
-    <nav class="dropdown-nav">
-        <button class="dropbtn" onclick="toggleDropdown()">Moje podstrony</button>
-        <div class="dropdown-content" id="dropdownMenu" style="display: none;">
-            <a href="docs/columns.html">O mnie</a>
-            <a href="docs/list.html">Projekty</a>
-            <a href="docs/contact.html">Kontakt</a>
+    <div class="vertical ">
+        <div class="horizontal header">
+            <img src="images/avatar.png" alt="BowDead" class="avatar">
+            <h1>Bartłomiej Gwóźdź</h1>
         </div>
-    </nav>
-    <script>
-        function toggleDropdown() {
-            const menu = document.getElementById('dropdownMenu');
-            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-        }
-        // Zamknij dropdown po kliknięciu poza nim
-        window.onclick = function (event) {
-            if (!event.target.matches('.dropbtn')) {
-                const menu = document.getElementById('dropdownMenu');
-                if (menu && menu.style.display === 'block') {
-                    menu.style.display = 'none';
-                }
-            }
-        }
-    </script>
-    <div class="content">
-        <div class="boxtitle">
-            <h2>Pare słów o mnie:</h2>
+        <div class="horizontal main">
+            11111111
         </div>
-        <div class="textfield">
-            Witam! Nazywam się Bartłomiej Gwóźdź i jestem pasjonatem nowoczesnych technologii oraz kreatywnych
-            rozwiązań. Obecnie studiuję informatykę, specjalizując się w inżynierii oprogramowania, co pozwala mi
-            zgłębiać tajniki projektowania, tworzenia i optymalizacji aplikacji oraz systemów informatycznych.
-            Poza studiami rozwijam swoje zainteresowania, takie jak grafika wektorowa, która łączy artystyczne podejście
-            z techniczną precyzją. Praca z grafiką daje mi możliwość twórczego wyrażania siebie i doskonalenia
-            umiejętności projektowych.
-            Na tej stronie znajdziesz więcej informacji o mnie, moich projektach oraz osiągnięciach. Mam nadzieję, że
-            uda mi się zainspirować Cię moją pracą i pasjami. Zapraszam do kontaktu oraz odkrycia tego, co tworzę!
-        </div>
-    </div>
-    <div class="footer">© 2025 Bartłomiej Gwóźdź. Wszystkie prawa zastrzeżone</div>
+        <div class="horizontal footer">© 2025 Bartłomiej Gwóźdź. Wszystkie prawa zastrzeżone</div>
     </div>
 </body>
 

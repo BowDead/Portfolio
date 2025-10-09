@@ -1,0 +1,115 @@
+@media screen and (min-width:320px) {
+    :root {
+        --ink: black;
+        --shadow: #00000088;
+        --color1: #011018ff;
+        --color2: #056594ff;
+        --color3: #033a56ff;
+        --border-color: #ffffff;
+        --border-width: 2px;
+        --bg-texture: url('../images/paper.png');
+    }
+}
+
+
+@media screen and (min-width:320px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        padding: 0;
+        margin: 0;
+        background-color: var(--color1);
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .avatar {
+        height: 100px;
+        width: 100px;
+        border: var(--border-width) solid var(--border-color);
+        border-radius: 25px;
+    }
+
+    .horizontal {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+    }
+
+    .vertical {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1 1 auto;
+        min-height: 0;
+    }
+
+    .header {
+        width: 100%;
+        background:
+            radial-gradient(ellipse 200% 100% at center, var(--color2), var(--color1)),
+            var(--bg-texture);
+        padding: 20px 0px;
+        border: var(--border-width) solid var(--border-color);
+        border-radius: 0 0 5px 5px;
+        -webkit-box-shadow: 0px 5px var(--shadow);
+        -moz-box-shadow: 0px 5px var(--shadow);
+        box-shadow: 0px 5px var(--shadow);
+        z-index: 100;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        background-blend-mode: multiply;
+    }
+
+    .main {
+        width: calc(100% - (var(--border-width)*2) - 100px);
+        background-color: var(--color3);
+        padding: 20px 0px;
+        border: var(--border-width) solid var(--border-color);
+        -webkit-box-shadow: 0px 5px var(--shadow);
+        -moz-box-shadow: 0px 5px var(--shadow);
+        box-shadow: 0px 5px var(--shadow);
+        z-index: 1;
+        border-top: none;
+        border-bottom: none;
+        flex: 1 1 auto;
+        min-height: 0;
+        overflow: auto;
+    }
+
+    .footer {
+        width: 100%;
+        background:
+            radial-gradient(ellipse 200% 100% at center, var(--color2), var(--color1)),
+            var(--bg-texture);
+        padding: 20px 0px;
+        border: var(--border-width) solid var(--border-color);
+        border-radius: 5px 5px 0 0;
+        -webkit-box-shadow: 0px -5px var(--shadow);
+        -moz-box-shadow: 0px -5px var(--shadow);
+        box-shadow: 0px -5px var(--shadow);
+        z-index: 100;
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+        background-blend-mode: multiply;
+    }
+
+
+    @media only screen and (min-width: 768px) {}
+
+    @media only screen and (max-width: 767px) {}
+}
